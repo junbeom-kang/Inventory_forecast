@@ -1,7 +1,7 @@
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
-
+import pandas as pd
 df=pd.read_csv('C:/User/nba.csv',delimiter=',')
 #1번
 temp=df.groupby(['Position','Team'])[['Age','Salary']].mean()
