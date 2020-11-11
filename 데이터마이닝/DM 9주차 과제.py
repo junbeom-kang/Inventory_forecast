@@ -2,7 +2,6 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
-
 temp=pd.read_csv('C:/User/nba.csv',delimiter=',')
 temp1=pd.concat([temp[temp['Team']=='Boston Celtics'],temp[temp['Team']=='Utah Jazz']])
 temp1=temp1[['Age','Salary','Team','Position']]
