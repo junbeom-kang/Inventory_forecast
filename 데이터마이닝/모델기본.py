@@ -14,7 +14,7 @@ def build_model():
 
 #(train_data, train_targets), (test_data, test_targets) =  boston_housing.load_data()
 (train_data, train_targets), (test_data, test_targets) =  boston_housing.load_data()
-
+type(train_data[0][0])
 
 #정규화
 mean = train_data.mean(axis=0)
