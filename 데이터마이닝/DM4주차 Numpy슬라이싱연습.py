@@ -9,7 +9,7 @@ def solve1(score):
 
 def solve2(score):
     temp=np.mean(score,axis=0)
-    print(score[:][:]-temp[:])
+    print(score-temp)
     return temp
 
 
