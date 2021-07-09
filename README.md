@@ -1,6 +1,6 @@
 # Inventory_forecast  재고량 예측
 <br><br>
-<img src = "https://user-images.githubusercontent.com/59498625/114296338-c5b39100-9ae5-11eb-8ab5-731123057d15.png" width="70%" height="70%">
+<img src = "https://user-images.githubusercontent.com/59498625/114296338-c5b39100-9ae5-11eb-8ab5-731123057d15.png" width="90%" height="90%">
 <br><br>
 
 # 시나리오
