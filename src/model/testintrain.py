@@ -19,18 +19,19 @@ def build_model():
     return model
 
 
-df = pd.read_csv('C:/User/data123.csv',encoding='cp949')
+#df = pd.read_csv('C:/User/data123.csv',encoding='cp949')
+df = pd.read_csv('C:/User/data1234.csv',encoding='cp949')
 CUV = df['cumulative UV']
 MUV = df['Maximum UV']
 
 
 df = df[['Aerosol','Temp_avg','Temp_min','Temp_max', 'Humidity','sunshine time','Total daylight hours','cloud cover']]
+print(df)
 CUV_X_train, CUV_X_test, CUV_Y_train, CUY_Y_test = train_test_split(df, CUV, test_size=0.2, shuffle=True, random_state=1234)
 MUV_X_train, MUV_X_test, MUV_Y_train, MUV_Y_test = train_test_split(df, MUV, test_size=0.2, shuffle=True, random_state=1234)
 
 CUVModel = build_model()
 MUVModel = build_model()
-
 CUV_history = CUVModel.fit(df, CUV, epochs=100, batch_size=10, verbose=0)
 MUV_history = MUVModel.fit(df, MUV, epochs=100, batch_size=10, verbose=0)
 
@@ -50,7 +51,7 @@ plt.ylabel('mse')
 plt.xlabel('epoch')
 plt.title('MUV', fontsize=10)
 plt.plot(MUV_history.history['loss'])
-#plt.show()
+plt.show()
 
-print(mean_squared_error(CUV_hat, CUY_Y_test))
-print(mean_squared_error(MUV_hat, MUV_Y_test))
+print("누적 자외선량의 mse 오차: ",mean_squared_error(CUV_hat, CUY_Y_test))
+print("최대 자외선량의 mse 오차: ",mean_squared_error(MUV_hat, MUV_Y_test))
