@@ -26,9 +26,8 @@ MUV = df['Maximum UV']
 
 
 df = df[['Aerosol','Temp_avg','Temp_min','Temp_max', 'Humidity','sunshine time','Total daylight hours','cloud cover']]
-print(df)
-CUV_X_train, CUV_X_test, CUV_Y_train, CUY_Y_test = train_test_split(df, CUV, test_size=0.2, shuffle=True, random_state=1234)
-MUV_X_train, MUV_X_test, MUV_Y_train, MUV_Y_test = train_test_split(df, MUV, test_size=0.2, shuffle=True, random_state=1234)
+CUV_X_train, CUV_X_test, CUV_Y_train, CUY_Y_test = train_test_split(df, CUV, test_size=0.2, shuffle=True, random_state=7)
+MUV_X_train, MUV_X_test, MUV_Y_train, MUV_Y_test = train_test_split(df, MUV, test_size=0.2, shuffle=True, random_state=7)
 
 CUVModel = build_model()
 MUVModel = build_model()
